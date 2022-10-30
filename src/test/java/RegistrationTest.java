@@ -1,13 +1,9 @@
-import PageObject.MainPage;
-import PageObject.RegistrationPage;
+import pageobject.MainPage;
 import io.qameta.allure.Description;
 import io.qameta.allure.junit4.DisplayName;
-import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import com.github.javafaker.Faker;
-
-import java.util.concurrent.TimeUnit;
 
 import static org.junit.Assert.assertTrue;
 

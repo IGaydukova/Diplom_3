@@ -1,4 +1,4 @@
-package PageObject;
+package pageobject;
 
 import io.qameta.allure.Step;
 import org.openqa.selenium.By;
@@ -8,7 +8,7 @@ import java.util.concurrent.TimeUnit;
 
 public class AuthorizationPage extends BasePage{
     //E-mail
-    private final By emailInput = By.xpath(".//div/main/div/form/fieldset[1]/div/div/input");
+    private final By emailInput = By.xpath(".//main//fieldset[1]//input");
     //Пароль
     private final By passInput = By.xpath("//input[@name='Пароль']");
     //Кнопка "Войти"
@@ -32,6 +32,7 @@ public class AuthorizationPage extends BasePage{
     public AuthorizationPage clickRecoverPassButton ()
     {
         driver.findElement(recoverPassword).click();
+        driver.manage().timeouts().implicitlyWait (10, TimeUnit.SECONDS);
         return this;
     }
     @Step("Click Enter button")
@@ -43,6 +44,7 @@ public class AuthorizationPage extends BasePage{
     @Step("Click href Enter")
     public AuthorizationPage enterHrefClick(){
         driver.findElement(enterHref).click();
+        driver.manage().timeouts().implicitlyWait (10, TimeUnit.SECONDS);
         return this;
     }
     @Step("Click href registration")

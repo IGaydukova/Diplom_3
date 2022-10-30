@@ -1,17 +1,15 @@
-package PageObject;
+package pageobject;
 
 import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-import java.util.concurrent.TimeUnit;
-
 public class RegistrationPage extends BasePage{
 
     //Имя
-    private final By nameInput = By.xpath(".//div/main/div/form/fieldset[1]/div/div/input");
+    private final By nameInput = By.xpath(".//main//fieldset[1]//input");
     //E-mail
-    private final By emailInput = By.xpath(".//div/main/div/form/fieldset[2]/div/div/input");
+    private final By emailInput = By.xpath(".//main//fieldset[2]//input");
     //Пароль
     private final By passInput = By.xpath("//input[@name='Пароль']");
     //Кнопка "Зарегистрироваться"
