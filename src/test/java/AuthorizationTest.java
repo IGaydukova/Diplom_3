@@ -22,9 +22,7 @@ public class AuthorizationTest extends BasePageTest{
         email = faker.internet().emailAddress();
     }
     @Before
-        public void setUp() {
-        WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
+        public void enterRegPage() {
         RegistrationPage registrationTestUser = new MainPage(driver)
                 .openPage()
                 .clickEnterAccountButton()

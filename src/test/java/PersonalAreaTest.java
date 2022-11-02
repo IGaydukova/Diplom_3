@@ -23,10 +23,7 @@ public class PersonalAreaTest extends BasePageTest {
 
     }
     @Before
-    public void setUp() {
-
-        WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
+    public void enterRegPage() {
         RegistrationPage registrationTestUser = new MainPage(driver)
                 .openPage()
                 .clickEnterAccountButton()
