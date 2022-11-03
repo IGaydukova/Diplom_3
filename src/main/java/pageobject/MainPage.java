@@ -10,7 +10,8 @@ public class MainPage extends BasePage{
     private final By personalAreaButton = By.xpath(".//header//a[contains(@href,'/account')]");
     //Кнопка войти в аккаунт
     private final By enterAccountButton = By.xpath(".//main//button[text()='Войти в аккаунт']");// "AppHeader_header__link__3D_hX");
-    //Кнопка Зарегистрироваться
+    //Кнопка Конструктор
+    private final By constructorButton = By.xpath(".//header//p[text()='Конструктор']");
 
 
     public MainPage (WebDriver driver) {super(driver);}
@@ -31,6 +32,12 @@ public class MainPage extends BasePage{
     {
         driver.findElement(enterAccountButton).click();
         return new AuthorizationPage(driver);
+    }
+    @Step("Click Constructor button")
+    public ConstructorPage clickConstructorButton()
+    {
+        driver.findElement(constructorButton).click();
+        return new ConstructorPage(driver);
     }
 
 }
